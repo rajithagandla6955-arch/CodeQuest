@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CodeQuest - Programming Learning Game</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+}
+
+/* Navigation */
+
+nav {
+    background: #151d35;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #263653;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin: 8px 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: radial-gradient(circle at center, #172b50, #0b1020 70%);
+}
+
+.tag {
+    display: inline-block;
+    color: #38bdf8;
+    background: #172b50;
+    border: 1px solid #2563eb;
+    padding: 9px 18px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #38bdf8;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #38bdf8;
+    color: #0b1020;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* Section Heading */
+
+.section-heading {
+    text-align: center;
+    padding: 55px 20px 25px;
+}
+
+.section-heading h2 {
+    color: #38bdf8;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #94a3b8;
+}
+
+/* Features */
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 20px 65px;
+}
+
+.card {
+    background: #151d35;
+    padding: 30px;
+    width: 250px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+}
+
+.card .icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+/* How it works */
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 20px 65px;
+}
+
+.step {
+    width: 220px;
+    background: #151d35;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.step h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    background: #151d35;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    border-top: 1px solid #263653;
+}
+
+@media(max-width: 700px) {
+    nav {
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav div {
+        line-height: 2;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+
+<nav>
+    <div class="logo">🎮 CodeQuest</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="register.jsp">Registration</a>
+        <a href="login.jsp">Student Login</a>
+        <a href="admin-login.jsp">Admin Login</a>
+        <a href="MissionServlet">Missions</a>
+        <a href="leaderboard.jsp">Leaderboard</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="tag">🚀 Welcome to the World of Coding</div>
+
+    <h1>Welcome to CodeQuest</h1>
+
+    <h2>Learn Coding Through Fun!</h2>
+
+    <p>
+        CodeQuest is an interactive programming learning game.
+        Improve your coding knowledge by solving programming
+        questions, completing exciting missions, earning XP rewards
+        and competing with other students on the leaderboard.
+    </p>
+
+    <div class="buttons">
+        <a href="register.jsp" class="btn">Get Started →</a>
+        <a href="login.jsp" class="btn secondary-btn">Student Login</a>
+    </div>
+
+</section>
+
+<!-- Features Section -->
+
+<div class="section-heading">
+    <h2>Why Choose CodeQuest?</h2>
+    <p>Explore exciting features and improve your programming skills.</p>
+</div>
+
+<section class="features">
+
+    <div class="card">
+        <div class="icon">💻</div>
+        <h3>Programming Missions</h3>
+        <p>
+            Learn Java, SQL and DSA through
+            interactive programming questions.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">⭐</div>
+        <h3>XP Rewards</h3>
+        <p>
+            Earn experience points by answering
+            questions correctly and completing missions.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>
+            Compare your performance with other
+            students and improve your ranking.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">📈</div>
+        <h3>Track Progress</h3>
+        <p>
+            Monitor your XP, current level and
+            completed missions through your dashboard.
+        </p>
+    </div>
+
+</section>
+
+<!-- How It Works -->
+
+<div class="section-heading">
+    <h2>How CodeQuest Works</h2>
+    <p>Start your coding journey in three simple steps.</p>
+</div>
+
+<section class="steps">
+
+    <div class="step">
+        <h3>01. Register</h3>
+        <p>Create your student account and join CodeQuest.</p>
+    </div>
+
+    <div class="step">
+        <h3>02. Solve Missions</h3>
+        <p>Answer programming questions and complete challenges.</p>
+    </div>
+
+    <div class="step">
+        <h3>03. Earn Rewards</h3>
+        <p>Collect XP points, increase your level and climb the leaderboard.</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    <p>© 2026 CodeQuest | Learn • Play • Code • Grow</p>
+</footer>
+
+</body>
+</html>
